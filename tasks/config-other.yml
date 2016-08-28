@@ -1,0 +1,7 @@
+---
+
+- name: add syslog-ng.conf include conf.d entry
+  lineinfile: dest='/etc/syslog-ng/syslog-ng.conf' regexp='^@include ".*conf.d/\*\.conf"$' line='@include "/etc/syslog-ng/conf.d/*.conf"'
+  notify:
+   - restart syslog-ng
+

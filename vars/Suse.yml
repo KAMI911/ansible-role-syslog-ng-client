@@ -1,0 +1,6 @@
+---
+
+syslogngpackage:
+  - "syslog-ng"
+
+syslog_ng_service: syslog

@@ -1,0 +1,5 @@
+---
+
+syslog_ng_server_host: [specify you server here]
+syslog_ng_server_port: 1514
+syslog_ng_service: syslog-ng

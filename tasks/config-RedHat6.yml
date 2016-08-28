@@ -1,0 +1,12 @@
+---
+
+- name: Add the OS specific variables
+  include_vars: "{{ ansible_os_family }}.yml"
+
+- { include: Debian.yml, when: "ansible_os_family == 'Debian'", static: no }
+- { include: RedHat.yml, when: "ansible_os_family == 'RedHat'", static: no }
+
+- name: add syslog-ng.conf include remote.conf entry
+  lineinfile: dest='/etc/syslog-ng/syslog-ng.conf' regexp='^@include ".*conf.d/remote.conf"$' line='@include "/etc/syslog-ng/conf.d/remote.conf"'
+  notify:
+   - restart syslog-ng

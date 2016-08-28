@@ -1,0 +1,12 @@
+# {{ ansible_managed }}
+
+destination d_network_tcp {
+  tcp("{{ syslog_ng_server_host }}" port ({{ syslog_ng_server_port }})
+    # tls( ca-dir("/etc/ssl/certs/") )
+  );
+};
+
+log {
+  source(s_sys); destination (d_network_tcp);
+};
+

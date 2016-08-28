@@ -1,0 +1,4 @@
+---
+
+syslogngpackage:
+  - "syslog-ng"
