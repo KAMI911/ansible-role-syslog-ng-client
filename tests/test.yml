@@ -1,0 +1,8 @@
+#
+# Testing syslog-ng client installation Ansible role
+#
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+    - hugepages
