@@ -2,6 +2,10 @@
 
 Installs syslog-ng and configures as client on Linux.
 
+Travis status:   [![Build Status](https://travis-ci.org/KAMI911/ansible-role-syslog-ng-client.svg?branch=master)](https://travis-ci.org/KAMI911/ansible-role-syslog-ng-client)
+Code Climate status: [![Code Climate](https://codeclimate.com/github/KAMI911/ansible-role-syslog-ng-client/badges/gpa.svg)](https://codeclimate.com/github/KAMI911/ansible-role-syslog-ng-client)
+Test Coverage status: [![Test Coverage](https://codeclimate.com/github/KAMI911/ansible-role-syslog-ng-client/badges/coverage.svg)](https://codeclimate.com/github/KAMI911/ansible-role-syslog-ng-client/coverage)
+
 ## Requirements
 
 None.
