@@ -7,8 +7,9 @@
 - { include: RedHat.yml, when: "ansible_os_family == 'RedHat'", static: no }
 
 - { include: config-RedHat6.yml, when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version|int <= 6", static: no }
+- { include: config-RedHat6.yml, when: "ansible_distribution == 'Ubuntu' and ansible_distribution_version == '12.04'", static: no }
 - { include: config-RedHat.yml,  when: "ansible_os_family == 'RedHat' and ansible_distribution_major_version|int  > 6", static: no }
-- { include: config-other.yml,   when: "ansible_os_family != 'RedHat'", static: no }
+- { include: config-other.yml,   when: "ansible_os_family != 'RedHat' and ansible_distribution_version != '12.04'", static: no }
 
 - name: create conf.d folder for configuration file
   file: path='/etc/syslog-ng/conf.d' state=directory owner=root group=root mode=0755
