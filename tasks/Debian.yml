@@ -1,0 +1,5 @@
+---
+
+- name: install the required packages in Debian derivatives
+  apt: name="{{ item }}" state=installed
+  with_items: "{{ syslogngpackage }}"
