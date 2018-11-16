@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: syslog-ng-client
   author: Kálmán Szalai - KAMI
   description: "Ansible role for syslog-ng client"
   license: MIT
